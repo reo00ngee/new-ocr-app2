@@ -8,15 +8,15 @@ Cloud API(OCR)とCHAT GPT API(テキスト修正)を使用して、画像ファ�
 誤字脱字、スペルミスを修正した文章と、それを要約した文章を閲覧することができます。
 
 # 仕様技術
-・PHP
-・Laravel
-・WSL2
-・ubuntu
-・Docker
-・MySQL
-・Cloud Vision API
-・CHAT GPT API
-・AWS（EC2）
+・PHP　　
+・Laravel　　
+・WSL2　　
+・ubuntu　　
+・Docker　　
+・MySQL　　
+・Cloud Vision API　　
+・CHAT GPT API　　
+・AWS（EC2）　　
 
 # 実装機能
 ・認証機能
