@@ -18,7 +18,7 @@
                 @csrf
                 <input type='hidden' name='user_id' value="{{ $user['id'] }}">
                 <div class="form-group">
-                    <p>OCR後に修正された文章</p>
+                    <p>OCRされた文章</p>
                     <textarea name='fixed_content' class="form-control" rows="10"></textarea>
                 </div>
                 <div class="form-group">

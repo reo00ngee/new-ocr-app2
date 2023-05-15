@@ -156,7 +156,7 @@ class HomeController extends Controller
                 $query->where('fixed_content', 'LIKE', '%' . $value . '%');
             }
 
-            $ocrs = $query->get();
+            $ocrs = $query->where('status', '1')->get();
         }
         return view('search', compact('user', 'ocrs', 'search'));
     }
