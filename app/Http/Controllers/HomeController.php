@@ -42,7 +42,7 @@ class HomeController extends Controller
     {
 
         $user = \Auth::user();
-        $ocrs = Ocr::where('user_id', $user['id'])->where('status', '1')->orderBy('id', 'DESC')->get();
+        $ocrs = Ocr::where('user_id', $user['id'])->where('status', '1')->orderBy('id', 'DESC')->paginate(5);
         // dd($ocrs);
         return view('ocrResult', compact('user', 'ocrs'));
     }
@@ -113,7 +113,7 @@ class HomeController extends Controller
         $user = \Auth::user();
         $ocr = Ocr::where('status', 1)->where('id', $id)->where('user_id', $user['id'])
             ->first();
-        $ocrs = Ocr::where('user_id', $user['id'])->where('status', '1')->orderBy('id', 'DESC')->get();
+        $ocrs = Ocr::where('user_id', $user['id'])->where('status', '1')->orderBy('id', 'DESC')->paginate(5);
         //取得したOCRをViewに渡す
         return view('edit', compact('user', 'ocr', 'ocrs'));
     }
@@ -142,7 +142,7 @@ class HomeController extends Controller
     {
 
         $user = \Auth::user();
-        $ocrs = Ocr::where('user_id', $user['id'])->where('status', '1')->orderBy('id', 'DESC')->get();
+        $ocrs = Ocr::where('user_id', $user['id'])->where('status', '1')->orderBy('id', 'DESC')->paginate(5);
         $search = $request->input('search');
         $query = Ocr::query();
 
@@ -156,7 +156,7 @@ class HomeController extends Controller
                 $query->where('fixed_content', 'LIKE', '%' . $value . '%');
             }
 
-            $ocrs = $query->where('status', '1')->get();
+            $ocrs = $query->where('status', '1')->paginate(5);
         }
         return view('search', compact('user', 'ocrs', 'search'));
     }

@@ -101,11 +101,16 @@
               <div class="card-body py-2 px-4">
                 @foreach($ocrs as $ocr)
                 <div class="card">
-                  <a href="/edit/{{$ocr['id']}}"><img src="{{ '/storage/' . $ocr['image']}}" class='w-100 mb-3' />{{Str::limit($ocr->fixed_content, 30, '...')}}</a>
-                  
+                  <a href="/edit/{{$ocr['id']}}">
+                    <img src="{{ '/storage/' . $ocr['image']}}" class='w-100 mb-3' />
+                    <p>{{Str::limit($ocr->fixed_content, 30, '...')}}</p>
+                  </a>
+
                 </div>
                 @endforeach
               </div>
+            {{$ocrs->links()}}
+              
             </div>
           </div>
 
