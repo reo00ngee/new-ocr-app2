@@ -115,7 +115,6 @@
                 {{ $ocrs->links('pagination::bootstrap-4') }}
 
               </div>
-              {{$ocrs->links()}}
             </div>
           </div>
 
