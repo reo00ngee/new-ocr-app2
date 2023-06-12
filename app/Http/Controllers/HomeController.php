@@ -158,7 +158,11 @@ class HomeController extends Controller
                 $query->where('fixed_content', 'LIKE', '%' . $value . '%');
             }
 
+<<<<<<< HEAD
             $ocrs = $query->where('user_id', $user['id'])->where('status', '1')->orderBy('id', 'DESC')->paginate(5);
+=======
+            $ocrs = $query->where('status', '1')->paginate(5);
+>>>>>>> f67ec9e90369971e3b8bd1d4a669334e8220da9a
         }
         return view('search', compact('user', 'ocrs', 'search'));
     }
