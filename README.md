@@ -30,7 +30,7 @@ http://54.199.249.244/register
 ・CHAT　GPTが流行っているが、画像入力機能がまだ備わっていないため、OCRの技術と組み合わせることで、テキストが書かれた画像なら画像を駆使してCHAT GPTを活用できることを試したかった
 
 # こだわりポイント
-・画像をテキストに変える機能（Cloud Vision API)  
+・画像をテキストに変える機能（Cloud Vision API)
 ・テキストの誤字脱字スペルミスの修正（CHAT GPT API）  
 ・テキストの要約（CHAT GPT API）
     
@@ -38,3 +38,4 @@ http://54.199.249.244/register
 ・CHAT GPT APIがPHP8.1以上に依存していたため、開発環境をPHP7.4からPHP8.1に作り直し、LaravelやMySQLもバージョンアップを行いました。  
 ・自作Docker-compose.ymlとLaravel sail両方を試しました。（自作のDocker-compose.yml：https://github.com/reo00ngee/old-ocr-app）
     
+# その他開発メモ    
